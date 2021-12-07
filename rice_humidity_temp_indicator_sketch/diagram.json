@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Daniel Nkemakolam",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 231, "left": 85.8, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 9.9,
+      "left": 172.4,
+      "attrs": { "temperature": "14.5", "humidity": "54.5" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": 106.2, "left": 249.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "dht1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "dht1:GND", "uno:GND.3", "black", [ "v0" ] ],
+    [ "dht1:SDA", "uno:8", "green", [ "v0" ] ],
+    [ "r1:1", "uno:8", "green", [ "v0" ] ],
+    [ "r1:2", "uno:5V", "green", [ "v0" ] ]
+  ]
+}
